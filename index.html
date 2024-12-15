@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda inglês com aulas personalizadas adaptadas às suas necessidades.">
+    <title>Professora de Inglês - Aulas Personalizadas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #ffffff;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/golden-gate.jpg') no-repeat center center/cover;
+            color: #ffffff;
+        }
+
+        header img {
+            max-width: 200px;
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background: linear-gradient(180deg, #001f54, #003181);
+            color: #ffffff;
+        }
+
+        .features .feature-box {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .features .feature-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .features .feature-box p {
+            font-size: 1em;
+            text-align: center;
+
+        }
+
+        section {
+            padding: 20px;
+            background: #ffffff;
+            color: #333;
+            margin: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .qualities {
+            padding: 40px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .qualities .qualities-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+
+        .qualities .quality-item {
+            background: #ffffff;
+            color: #333;
+            border-radius: 10px;
+            max-width: 300px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .qualities .quality-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .qualities .quality-item h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            padding: 0 10px;
+            color: #ff0000;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .qualities .quality-item p {
+            padding: 0 10px 20px;
+            font-size: 1em;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 30%);
+        }
+
+        .about-teacher {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(180deg, #001f54, #003181);
+            color: #ffffff;
+            padding: 40px;
+            margin-top: 7%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .about-teacher img {
+            border-radius: 50%;
+            max-width: 300px;
+            height: auto;
+            position: absolute;
+            top: -70px;
+            left: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-teacher div {
+            max-width: 500px;
+            margin-left: 350px;
+        }
+
+        .about-teacher h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .reviews {
+            display: flex;
+            align-items: center;
+        }
+
+        .reviews img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .reviews .review-content {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .reviews h2 {
+            color: #001f54;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .reviews p {
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .cta a {
+            display: inline-block;
+            text-decoration: none;
+            background: #007bff;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        .cta a:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1px;
+            background: #cccccc;
+            color: #000000;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .payment-methods {
+            text-align: center;
+            padding: 20px 0;
+            background: #f9f9f9;
+        }
+
+        .payment-methods img {
+            max-height: 40px;
+            margin: 0 10px;
+        }
+
+        .promo {
+            text-align: center;
+            background: linear-gradient(180deg, #001f54, #003181);
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+
+        .promo h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .promo p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .promo .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .promo .price .old-price {
+            text-decoration: line-through;
+            color: #ff6666;
+            margin-right: 10px;
+        }
+
+        .promo .price .highlight {
+            color: #ffcc00;
+        }
+
+        .promo .cta {
+            margin-top: 20px;
+        }
+
+        .promo .cta a {
+            text-decoration: none;
+            background: #007bff;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        .promo .cta a:hover {
+            background: #0056b3;
+        }
+
+        .promo .highlight-red {
+            display: inline-block;
+            background: #ff4d4d;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="Logo/LOGO_MINIFY_BIANCA_FUNDO_TRANSPARENTE_LETRA_BRANCA.png" alt="Logo da Empresa">
+        <h1>Bianca Private Classes</h1>
+        <div class='cta'>
+            <a href='https://wa.me/5511964705450?text=Hello%20Teacher!%20Me%20interessei%20pelo%20seu%20trabalho%20e%20gostaria%20de%20mais%20informações
+            '
+            target="_blank" 
+            rel="noopener noreferrer">
+            SIM, QUERO FALAR A LÍNGUA MAIS FALADA DO MUNDO</a>
+        </div>
+    </header>
+
+    <div class="features">
+        <div class="feature-box">
+            <h3><img src="images/icon-mini.png" alt="Ícone"
+                    style="width: 20px; vertical-align: middle; margin-right: 5px;"> Do Básico ao Avançado</h3>
+            <p>Você aprende no seu ritmo, começando de onde está até dominar completamente o conteúdo!</p>
+        </div>
+        <div class="feature-box">
+            <h3><img src="images/icon-mini.png" alt="Ícone"
+                    style="width: 20px; vertical-align: middle; margin-right: 5px;"> Aulas Personalizadas</h3>
+            <p>Feita especialmente para você, adaptando o conteúdo e o ritmo às suas necessidades, garantindo um
+                aprendizado mais eficiente e motivador!</p>
+        </div>
+        <div class="feature-box">
+            <h3><img src="images/icon-mini.png" alt="Ícone"
+                    style="width: 20px; vertical-align: middle; margin-right: 5px;"> Aulas Particulares</h3>
+            <p>Atenção personalizada para você, com atenção exclusiva e no seu ritmo, ajudando a superar dificuldades e
+                alcançar seus objetivos mais rápido!</p>
+        </div>
+    </div>
+
+
+    <section class="about-teacher">
+        <img src="images/teacher-1.png" alt="Foto da Professora">
+        <div>
+            <h2>Sobre a Professora</h2>
+            <p>Sou uma professora de inglês apaixonada, com anos de experiência ajudando alunos a melhorarem suas
+                habilidades no idioma. Seja você iniciante ou avançado, estou aqui para ajudar!</p>
+        </div>
+    </section>
+
+    <section class="qualities">
+        <div class="qualities-container">
+            <div class="quality-item">
+                <img src="images/qualidade-vantagem-imagem-1.jpg" alt="Qualidade 1">
+                <h3>Descubra o inglês como nunca antes</h3>
+                <p>Nosso ensino digital é totalmente adaptável ao seu tempo e à sua rotina. Experimente um aprendizado
+                    único!</p>
+            </div>
+            <div class="quality-item">
+                <img src="images/qualidade-vantagem-imagem-2.jpg" alt="Qualidade 2">
+                <h3>Independência Linguística</h3>
+                <p>Fale inglês em situações reais, sem depender de traduções. Venha conquistar sua independência
+                    linguística!</p>
+            </div>
+            <div class="quality-item">
+                <img src="images/qualidade-vantagem-imagem-3.png" alt="Qualidade 3">
+                <h3>Mistura Equilibrada</h3>
+                <p>Aprenda com professores experientes e torne sua pronúncia impecável para situações do dia a dia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <img src="images/oque-meus-alunos-dizem-1.png" alt="Logo" />
+        <div class="review-content">
+            <h2>Avaliação dos Meus Alunos</h2>
+            <p><strong>João D.</strong>: "As aulas foram incríveis e perfeitamente adaptadas aos meus objetivos!"</p>
+            <p><strong>Maria S.</strong>: "Melhorei muito em poucos meses. Recomendo totalmente!"</p>
+        </div>
+    </section>
+
+    <div class="promo">
+        <h2>A opção mais vantajosa para aprender inglês!</h2>
+        <span class="highlight-red">Não perca essa condição especial.</span>
+        <p>Estude com aulas personalizadas de forma rápida, leve e divertida em apenas 4 meses - direto e sem enrolação!
+        </p>
+        <div class="price">
+            <span class="old-price">00x de R$ 000,00</span><br>
+            <span>por</span> <span class="highlight">00x de R$ 000,00</span>
+        </div>
+
+    </div>
+
+
+    <section class='cta'>
+        <p>Pronto para começar sua jornada de aprendizado de inglês?</p>
+        <a href='https://wa.me/5511964705450?text=Hello%20Teacher!%20Me%20interessei%20pelo%20seu%20trabalho%20e%20gostaria%20de%20mais%20informações
+        '
+        target="_blank" 
+        rel="noopener noreferrer">
+        SIM, QUERO FALAR A LÍNGUA MAIS FALADA DO MUNDO</a>
+    </section>
+
+    <div class="payment-methods">
+        <img src="images/pix-logo-url.png" alt="Pix">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Professora de Inglês. Todos os Direitos Reservados.</p>
+    </footer>
+</body>
+
+</html>
